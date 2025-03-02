@@ -44,7 +44,7 @@ const MyMark = () => {
     <div>
       <div className="overflow-x-auto">
         <table className="bg-white min-w-fa-pull-left">
-          <thead className="text-white bg-green-600">
+          <thead className="text-white bg-green-800 opacity-90">
             <tr>
               <th className="w-24 px-4 border-b">Minute</th>
               <th className="w-24 px-4 border-b">Time</th>
@@ -56,9 +56,9 @@ const MyMark = () => {
           </thead>
           <tbody className="h-[8vh]">
             <tr>
-              <td className="px-4 bg-gray-200 border-b">Row 1 Col 1</td>
-              <td className="px-4 bg-gray-200 border-b">0:01</td>
-              <td className="px-4 bg-gray-200 border-b">
+              <td className="px-4 bg-green-200 border-b">Row 1 Col 1</td>
+              <td className="px-4 bg-green-200 border-b">0:01</td>
+              <td className="px-4 bg-green-200 border-b">
                 <b>Lack of respect</b>
                 <br />
                 Tripping
@@ -67,7 +67,7 @@ const MyMark = () => {
           </tbody>
         </table>
       </div>
-      <div className="p-5 bg-green-100">
+      <div className="p-5 mx-4 bg-green-100">
         <div className="mb-2 font-bold text-green-800">My mark:</div>
         <div className="flex flex-row bg-gradient-to-r from-white to-[yellow] w-min">
           <div className="px-5 border border-black">1</div>
