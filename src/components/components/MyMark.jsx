@@ -54,7 +54,7 @@ const MyMark = () => {
               </th>
             </tr>
           </thead>
-          <tbody className="h-[8vh]">
+          <tbody className="h-[70px]">
             <tr>
               <td className="px-4 bg-green-200">Row 1 Col 1</td>
               <td className="px-4 bg-green-200">0:01</td>

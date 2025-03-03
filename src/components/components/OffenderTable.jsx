@@ -131,7 +131,7 @@ const OffenderTable = () => {
               </th>
             </tr>
           </thead>
-          <tbody className="h-[8vh]">
+          <tbody className="h-[70px]">
             <tr>
               <td className="px-4 bg-green-200">
                 <img src={realMadrid} className="h-6" alt="real" />

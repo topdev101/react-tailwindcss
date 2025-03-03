@@ -28,7 +28,7 @@ const MarkTable = () => {
               <th className="text-center w-[100px]">
                 My <br /> mark{" "}
               </th>
-              <th className="w-[200px] p-0 m-0 text-center">
+              <th className="w-[120px] p-0 m-0 text-center">
                 Community <br />
                 mark
               </th>
@@ -40,7 +40,7 @@ const MarkTable = () => {
             </tr>
           </thead>
           <tbody>
-            <tr className="h-[8vh]">
+            <tr className="h-[70px]">
               <td className="relative text-center bg-green-200">
                 <div className="absolute bg-gradient-to-r from-white to-[#c4cf73] transform -translate-x-1/2 -translate-y-1/2 border border-black w-10 h-7 top-1/2 left-1/2">
                   2
@@ -91,11 +91,13 @@ const MarkTable = () => {
                   <td key={i} className="relative text-center bg-green-200">
                     <div
                       className={twMerge(
-                        "absolute w-10 transform -translate-x-1/2 -translate-y-1/2 border border-black h-7 top-1/2 left-1/2",
-                        i === 1 ? "bg-white" : ""
+                        i === 1 ? "bg-white" : "",
+                        (i === 0 || i === 1) && mark !== -1
+                          ? "absolute transform border border-black -translate-x-1/2 -translate-y-1/2  w-10 h-7 top-1/2 left-1/2"
+                          : ""
                       )}
                     >
-                      {mark}
+                      {mark !== -1 ? mark : ""}
                     </div>
                   </td>
                 ))}
