@@ -66,14 +66,16 @@ const Container = () => {
     //     </tbody>
     //   </table>
     // </div>
-    <div className="flex">
-      <div className="w-1/3">
-        <MyMark />
+    <div className="flex flex-col 2xl:flex-row">
+      <div className="flex flex-col w-full lg:flex-row 2xl:w-2/3">
+        <div className="w-full lg:w-1/2">
+          <MyMark />
+        </div>
+        <div className="w-full lg:w-1/2">
+          <OffenderTable />
+        </div>
       </div>
-      <div className="w-1/3">
-        <OffenderTable />
-      </div>
-      <div className="w-1/3">
+      <div className="2xl:w-1/3">
         <MarkTable />
       </div>
     </div>

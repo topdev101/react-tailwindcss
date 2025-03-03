@@ -9,7 +9,7 @@ export default function RowTable(props) {
         <div className="flex" key={index}>
           <div className="w-6/12 text-black bg-gray-400">
             <div className="flex h-[38px] border-[1px] items-center border-black justify-center text-center">
-              {item.title}
+              <b>{item.title}</b>
             </div>
           </div>
           <div className="w-6/12 text-black bg-white">

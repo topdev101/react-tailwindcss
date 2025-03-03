@@ -153,7 +153,7 @@ const OffenderTable = () => {
               </div>
             </div>
           </div>
-          <div className="flex gap-2 w-5/12 bg-[#558131] border-[2px] border-black text-black">
+          <div className="flex w-5/12 bg-[#558131] border-[2px] border-black text-black">
             <div className="font-bold text-black"></div>
             <div className="pl-2 font-bold text-black text-[18px]">
               SEVERITY OF OFFENCE

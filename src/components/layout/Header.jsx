@@ -5,7 +5,7 @@ import realMadrid from "../../assets/images/real_madrid.png";
 
 function Header() {
   return (
-    <header className="header h-[10vh] bg-green-900 flex justify-between items-center px-4">
+    <header className="header h-[90px] bg-green-900 flex justify-between items-center px-4">
       <div className="flex space-x-2 items-center text-[14px]">
         <div className="flex flex-row space-x-2">
           <div className="flex flex-col space-y-2">
