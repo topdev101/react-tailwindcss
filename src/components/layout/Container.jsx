@@ -1,6 +1,7 @@
 import React from "react";
 import MyMark from "../components/MyMark";
 import OffenderTable from "../components/OffenderTable";
+import MarkTable from "../components/MarkTable";
 
 const Container = () => {
   return (
@@ -72,7 +73,9 @@ const Container = () => {
       <div className="w-1/3">
         <OffenderTable />
       </div>
-      <div></div>
+      <div className="w-1/3">
+        <MarkTable />
+      </div>
     </div>
   );
 };

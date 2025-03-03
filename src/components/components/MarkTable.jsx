@@ -1,0 +1,115 @@
+import React from "react";
+import { twMerge } from "tailwind-merge";
+
+const MarkTable = () => {
+  const markData = [
+    [-1, 1.7, 2, 2, 0, 2],
+    [2, 1.0, -1, -1, -1, -1],
+    [2, 1.7, 2, 2, 2, 0],
+    [0, 0.7, -1, -1, -1, -1],
+    [1, 1.7, 0, 1, 2, 2],
+    [2, 1.7, 2, 2, 0, 2],
+    [-1, 1.0, 0, 2, -1, -1],
+    [-1, 0.7, -1, -1, -1, -1],
+    [2, 1.7, 2, 0, 0, 2],
+    [2, 1.7, -1, -1, -1, -1],
+    [-1, 1.0, -1, -1, -1, -1],
+    [-1, 1.7, -1, -1, -1, -1],
+    [1, 1.7, -1, -1, -1, -1],
+    [-1, 1.7, 0, 1, 2, 2],
+    [2, 0.7, -1, -1, -1, -1],
+  ];
+  return (
+    <div>
+      <div>
+        <table className="w-full bg-white min-w-fa-pull-left">
+          <thead className="text-white bg-green-800 opacity-90">
+            <tr>
+              <th className="text-center w-[100px]">
+                My <br /> mark{" "}
+              </th>
+              <th className="w-[200px] p-0 m-0 text-center">
+                Community <br />
+                mark
+              </th>
+              <th className="text-center">A.B.</th>
+              <th className="text-center">D.A</th>
+              <th className="text-center">P.C</th>
+              <th className="text-center">P.G</th>
+              <th className="text-center"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="h-[8vh]">
+              <td className="relative text-center bg-green-200">
+                <div className="absolute bg-gradient-to-r from-white to-[#c4cf73] transform -translate-x-1/2 -translate-y-1/2 border border-black w-10 h-7 top-1/2 left-1/2">
+                  2
+                </div>
+              </td>
+              <td className="relative text-center bg-green-200">
+                <div className="absolute w-10 transform -translate-x-1/2 -translate-y-1/2 bg-white border border-black h-7 top-1/2 left-1/2">
+                  2.8
+                </div>
+              </td>
+              <td className="relative text-center bg-green-200">
+                <div className="absolute w-10 transform -translate-x-1/2 -translate-y-1/2 border border-black h-7 top-1/2 left-1/2">
+                  2
+                </div>
+              </td>
+              <td className="relative text-center bg-green-200">
+                <div className="absolute w-10 transform -translate-x-1/2 -translate-y-1/2 border border-black h-7 top-1/2 left-1/2">
+                  3
+                </div>
+              </td>
+              <td className="relative text-center bg-green-200">
+                <div className="absolute w-10 transform -translate-x-1/2 -translate-y-1/2 border border-black h-7 top-1/2 left-1/2">
+                  2
+                </div>
+              </td>
+              <td className="relative text-center bg-green-200">
+                <div className="absolute w-10 transform -translate-x-1/2 -translate-y-1/2 border border-black h-7 top-1/2 left-1/2">
+                  2
+                </div>
+              </td>
+
+              <td className="relative text-center bg-green-200">
+                <div>+</div>
+              </td>
+            </tr>
+            <tr className="h-[45px] bg-green-200">
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            {markData.map((marks, index) => (
+              <tr key={index} className="h-[38px]">
+                {marks.map((mark, i) => (
+                  <td key={i} className="relative text-center bg-green-200">
+                    <div
+                      className={twMerge(
+                        "absolute w-10 transform -translate-x-1/2 -translate-y-1/2 border border-black h-7 top-1/2 left-1/2",
+                        i === 1 ? "bg-white" : ""
+                      )}
+                    >
+                      {mark}
+                    </div>
+                  </td>
+                ))}
+                <td className="relative text-center bg-green-200">
+                  <div></div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div></div>
+    </div>
+  );
+};
+
+export default MarkTable;
