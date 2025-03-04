@@ -1,0 +1,79 @@
+import React from "react";
+import realMadrid from "../../assets/images/real_madrid.png";
+import TableRow from "./table/RowTable";
+import { data, opponentData, offenderData } from "../../utils/Constant";
+
+const OffenderTable = () => {
+  return (
+    <div className="bg-green-100">
+      <div className="overflow-x-auto">
+        <table className="w-full bg-white min-w-fa-pull-left">
+          <thead className="text-white bg-green-800 opacity-90">
+            <tr className="">
+              <th className="w-1/2 px-4 text-left">Offender</th>
+              <th className="w-1/3 px-4 text-center">
+                Decision <br /> by referee
+              </th>
+              <th className="w-1/3 px-4 text-center">
+                Official <br />
+                mark
+              </th>
+            </tr>
+          </thead>
+          <tbody className="h-[70px]">
+            <tr>
+              <td className="px-4 bg-green-200">
+                <img src={realMadrid} className="h-6" alt="real" />
+                <div>Marsaxlokk</div>
+              </td>
+              <td className="px-4 text-center bg-green-200">red card</td>
+              <td className="px-4 text-center bg-green-200"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div className="pl-3 m-3">
+        <div className="flex">
+          <div className="w-7/12 text-white bg-[#316538] border-gray-700">
+            <div className="flex gap-2">
+              <div className="pl-1 font-bold text-white">-</div>
+              <div className="text-2xl font-bold text-[19px]">
+                Considerations
+              </div>
+            </div>
+          </div>
+          <div className="flex w-6/12 bg-[#558131] border-[2px] border-black text-black">
+            <div className="font-bold text-black"></div>
+            <div className="pl-2 font-bold text-black text-[18px]">
+              SEVERITY OF OFFENCE
+            </div>
+          </div>
+        </div>
+        <div className="flex">
+          <div className="w-full">
+            <div className="flex">
+              <div className="w-1/12">ABC</div>
+              <div className="w-11/12">
+                <TableRow data={data} />
+              </div>
+            </div>
+            <div className="flex">
+              <div className="w-1/12">ABC</div>
+              <div className="w-11/12">
+                <TableRow data={offenderData} />
+              </div>
+            </div>
+            <div className="flex">
+              <div className="w-1/12">ABC</div>
+              <div className="w-11/12">
+                <TableRow data={opponentData} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default OffenderTable;

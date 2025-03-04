@@ -1,43 +1,5 @@
 import React from "react";
-
-const markData = [
-  {
-    name: "Alvarez Denis",
-    mark: 3,
-    hasEye: false,
-    isSelected: false,
-  },
-  {
-    name: "Bacarisa Adrian",
-    mark: 2,
-    hasEye: false,
-    isSelected: false,
-  },
-  {
-    name: "Canepz Patrick",
-    mark: 2,
-    hasEye: false,
-    isSelected: false,
-  },
-  {
-    name: "Grech Paul",
-    mark: 2,
-    hasEye: true,
-    isSelected: false,
-  },
-  {
-    name: "Barcelo Jason",
-    mark: 3,
-    hasEye: false,
-    isSelected: true,
-  },
-  {
-    name: "Macias Michael",
-    mark: 2,
-    hasEye: false,
-    isSelected: true,
-  },
-];
+import { markData } from "../../utils/Constant";
 
 const MyMark = () => {
   return (
@@ -48,7 +10,7 @@ const MyMark = () => {
             <tr>
               <th className="w-24 px-4">Minute</th>
               <th className="w-24 px-4">Time</th>
-              <th className="px-4 w-[600px] text-left">
+              <th className="px-4 lg:w-[600px] w-full text-left">
                 Topic <br />
                 subtopic
               </th>
@@ -67,7 +29,7 @@ const MyMark = () => {
           </tbody>
         </table>
       </div>
-      <div className="p-5 ml-4 bg-green-100">
+      <div className="p-5 pb-12 mb-4 ml-4 mr-4 bg-green-100 lg:mr-0">
         <div className="mb-2 font-bold text-green-800">My mark:</div>
         <div className="flex flex-row bg-gradient-to-r from-white to-[yellow] w-min">
           <div className="px-5 border border-black">1</div>

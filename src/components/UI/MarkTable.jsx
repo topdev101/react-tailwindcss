@@ -1,5 +1,6 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
+import PlusButton from "./Button/PlusButton";
 
 const MarkTable = () => {
   const markData = [
@@ -42,7 +43,7 @@ const MarkTable = () => {
           <tr className="h-[70px] font-bold">
             <td className="relative text-center bg-green-200">
               <div className="absolute bg-gradient-to-r from-white to-[#c4cf73] transform -translate-x-1/2 -translate-y-1/2 border border-black w-10 h-7 top-1/2 left-1/2">
-                2
+                <div className="opacity-60">2</div>
               </div>
             </td>
             <td className="relative text-center bg-green-200">
@@ -51,28 +52,30 @@ const MarkTable = () => {
               </div>
             </td>
             <td className="relative text-center bg-green-200">
-              <div className="absolute w-10 transform -translate-x-1/2 -translate-y-1/2 border border-black h-7 top-1/2 left-1/2">
+              <div className="absolute w-10 transform -translate-x-1/2 -translate-y-1/2 h-7 top-1/2 left-1/2">
                 2
               </div>
             </td>
             <td className="relative text-center bg-green-200">
-              <div className="absolute w-10 transform -translate-x-1/2 -translate-y-1/2 border border-black h-7 top-1/2 left-1/2">
+              <div className="absolute w-10 transform -translate-x-1/2 -translate-y-1/2 h-7 top-1/2 left-1/2">
                 3
               </div>
             </td>
             <td className="relative text-center bg-green-200">
-              <div className="absolute w-10 transform -translate-x-1/2 -translate-y-1/2 border border-black h-7 top-1/2 left-1/2">
+              <div className="absolute w-10 transform -translate-x-1/2 -translate-y-1/2 h-7 top-1/2 left-1/2">
                 2
               </div>
             </td>
-            <td className="relative text-center bg-green-200">
-              <div className="absolute w-10 transform -translate-x-1/2 -translate-y-1/2 border border-black h-7 top-1/2 left-1/2">
+            <td className="relative text-center bg-green-200 ">
+              <div className="absolute w-10 transform -translate-x-1/2 -translate-y-1/2 h-7 top-1/2 left-1/2">
                 2
               </div>
             </td>
 
             <td className="relative text-center bg-green-200">
-              <div>+</div>
+              <div className="w-[5px]">
+                <PlusButton />
+              </div>
             </td>
           </tr>
           <tr className="h-[45px] bg-green-100">

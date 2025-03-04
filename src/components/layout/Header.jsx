@@ -1,7 +1,8 @@
 import React from "react";
-import PlayButton from "../common/Button/PlayButton";
+import PlayButton from "../UI/Button/PlayButton";
 import brc from "../../assets/images/barcelona.png";
 import realMadrid from "../../assets/images/real_madrid.png";
+import StarButton from "../UI/Button/StarButton";
 
 function Header() {
   return (
@@ -41,10 +42,7 @@ function Header() {
         </div>
       </div>
       <div className="flex space-x-2">
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
+        <StarButton />
       </div>
     </header>
   );
