@@ -7,6 +7,7 @@ import barcelona from "../../../assets/images/barcelona.png";
 import YellowCard from "../shapes/YellowCard";
 import { PlusCircle } from "../svgs/PlusCircle";
 import TriangleButton from "../buttons/TriangleButton";
+import { Play } from "../svgs/Play";
 
 const IncidentTable = () => {
   return (
@@ -92,7 +93,9 @@ const IncidentTable = () => {
                 </td>
 
                 <td className="p-1 text-center">
-                  {data.DBR === "warning" ? <YellowCard /> : <TriangleButton />}
+                  <div className="flex items-center justify-center">
+                    {data.DBR === "warning" ? <YellowCard /> : <Play />}
+                  </div>
                 </td>
                 <td className="p-1 text-center">
                   <div
