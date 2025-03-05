@@ -1,5 +1,6 @@
 import React from "react";
 import { markData } from "../../utils/Constant";
+import VideosCard from "./shapes/VideosCard";
 
 const MyMark = () => {
   return (
@@ -18,8 +19,18 @@ const MyMark = () => {
           </thead>
           <tbody className="h-[70px]">
             <tr>
-              <td className="px-4 bg-green-200">Row 1 Col 1</td>
-              <td className="px-4 bg-green-200">0:01</td>
+              <td className="px-4 bg-green-200">
+                <VideosCard />
+              </td>
+              <td className="px-4 bg-green-200">
+                <div></div>
+                <div>
+                  0:01
+                  <div class="relative flex items-center justify-center w-[24px] h-6 rounded-full bg-green-700">
+                    <div class="absolute top-[3px] left-[9px] w-0 h-0 border-t-[9px] border-t-transparent border-l-[9px] border-l-white border-b-[9px] border-b-transparent"></div>
+                  </div>
+                </div>
+              </td>
               <td className="px-4 bg-green-200">
                 <b>Lack of respect</b>
                 <br />

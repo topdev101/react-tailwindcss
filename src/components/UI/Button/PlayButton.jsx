@@ -2,13 +2,9 @@ import React from "react";
 
 const PlayButton = () => {
   return (
-    <button
-      type="button"
-      className="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-full text-sm p-2 text-center inline-flex items-center justify-center"
-    >
-      <div className="w-0 h-0 border-t-4 border-t-transparent border-l-4 border-l-white border-b-4 border-b-transparent"></div>
-      <span className="sr-only">Play</span>
-    </button>
+    <div class="relative flex items-center justify-center w-6 h-6 rounded-full bg-green-700">
+      <div class="absolute top-[3px] left-[9px] w-0 h-0 border-t-[9px] border-t-transparent border-l-[9px] border-l-white border-b-[9px] border-b-transparent"></div>
+    </div>
   );
 };
 

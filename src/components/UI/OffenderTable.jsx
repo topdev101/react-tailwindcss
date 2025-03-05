@@ -1,7 +1,8 @@
 import React from "react";
-import realMadrid from "../../assets/images/real_madrid.png";
+import realMadrid from "../../assets/images/Real Madrid.png";
 import TableRow from "./table/RowTable";
 import { data, opponentData, offenderData } from "../../utils/Constant";
+import YellowCard from "./shapes/YellowCard";
 
 const OffenderTable = () => {
   return (
@@ -23,10 +24,16 @@ const OffenderTable = () => {
           <tbody className="h-[70px]">
             <tr>
               <td className="px-4 bg-green-200">
-                <img src={realMadrid} className="h-6" alt="real" />
-                <div>Marsaxlokk</div>
+                <div className="flex gap-2">
+                  <div>
+                    <img src={realMadrid} className="h-6" alt="real" />
+                  </div>
+                  <div>Real Madrid</div>
+                </div>
               </td>
-              <td className="px-4 text-center bg-green-200">red card</td>
+              <td className="px-4 text-center bg-green-200">
+                <YellowCard />
+              </td>
               <td className="px-4 text-center bg-green-200"></td>
             </tr>
           </tbody>
@@ -52,19 +59,31 @@ const OffenderTable = () => {
         <div className="flex">
           <div className="w-full">
             <div className="flex">
-              <div className="w-1/12">ABC</div>
+              <div class="flex items-center justify-center w-1/12 h-[228px] border border-black bg-[#70ad46]">
+                <span class="-rotate-90 text-[20px] font-bold text-black whitespace-nowrap">
+                  Main criteria
+                </span>
+              </div>
               <div className="w-11/12">
                 <TableRow data={data} />
               </div>
             </div>
             <div className="flex">
-              <div className="w-1/12">ABC</div>
+              <div class="flex items-center justify-center w-1/12 h-[190px] border border-black bg-[#a9cf8b]">
+                <span class="-rotate-90 text-[20px] text-black whitespace-nowrap font-bold">
+                  Offender
+                </span>
+              </div>
               <div className="w-11/12">
                 <TableRow data={offenderData} />
               </div>
             </div>
             <div className="flex">
-              <div className="w-1/12">ABC</div>
+              <div class="flex items-center justify-center w-1/12 h-[152px] border border-black bg-[#c6dfb6]">
+                <span class="-rotate-90 text-[20px] text-black whitespace-nowrap font-bold">
+                  Opponent
+                </span>
+              </div>
               <div className="w-11/12">
                 <TableRow data={opponentData} />
               </div>
