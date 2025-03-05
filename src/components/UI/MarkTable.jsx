@@ -1,6 +1,6 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
-import PlusButton from "./buttons/PlusButton";
+import { PlusCircle } from "./svgs/PlusCircle";
 
 const MarkTable = () => {
   const markData = [
@@ -74,7 +74,7 @@ const MarkTable = () => {
 
             <td className="relative text-center bg-green-200">
               <div className="w-[5px]">
-                <PlusButton />
+                <PlusCircle />
               </div>
             </td>
           </tr>

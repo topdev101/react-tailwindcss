@@ -4,13 +4,10 @@ import { RoundLocalHospital } from "./svgs/RoundLocalHospital";
 import { RightArrow } from "./svgs/RightArrow";
 
 const OfficialAnswer = () => {
-  // State for the first row (0–6)
   const [selectedOfficialMark, setSelectedOfficialMark] = useState(4);
 
-  // State for the VAR row (1–4)
   const [selectedVarMark, setSelectedVarMark] = useState(3);
 
-  // Marks for the first row
   const officialMarks = [
     { value: 0, style: "bg-white" },
     { value: 1, style: "bg-[#d7d6db]" },
@@ -21,7 +18,6 @@ const OfficialAnswer = () => {
     { value: 6, style: "bg-[#f81702]" },
   ];
 
-  // Marks for the VAR row
   const varMarks = [
     { value: 1, style: "bg-white" },
     {
@@ -39,15 +35,13 @@ const OfficialAnswer = () => {
   ];
 
   return (
-    <div className="bg-[#d2e7d6] m-2">
-      <div className="p-5 pb-12 mb-4 ml-4 mr-4 lg:mr-0">
-        {/* Header with Star icon */}
+    <div className="pb-0">
+      <div className="p-5 ml-4 mr-4 lg:mr-0">
         <div className="mb-2 gap-1 font-bold flex text-[#ff8c36]">
           <Star />
           <div>Official Answer:</div>
         </div>
 
-        {/* First row of marks (0–6) */}
         <div className="flex flex-row pl-3 font-bold bg-gradient-to-r w-min">
           {officialMarks.map((mark) => (
             <div
@@ -56,7 +50,7 @@ const OfficialAnswer = () => {
               className={`relative px-5 py-1 border border-black cursor-pointer ${mark.style}`}
             >
               {mark.value}
-              {/* Conditionally render the triangle if this mark is selected */}
+
               {selectedOfficialMark === mark.value && (
                 <div className="absolute bottom-0 w-0 h-0 transform -translate-x-1/2 translate-y-full border-t-[13px] border-b-0 border-l-[13px] border-r-[13px] border-transparent left-1/2 border-t-black" />
               )}
@@ -64,7 +58,6 @@ const OfficialAnswer = () => {
           ))}
         </div>
 
-        {/* Checkbox */}
         <div className="flex gap-2 p-4">
           <input type="checkbox" className="w-6 h-6" />
           <div className="flex items-center justify-center text-center">
@@ -72,7 +65,6 @@ const OfficialAnswer = () => {
           </div>
         </div>
 
-        {/* VAR intervention */}
         <div>
           <div className="flex gap-1 mb-2 font-bold">
             <div className="text-green-800">VAR intervention:</div>
@@ -80,7 +72,6 @@ const OfficialAnswer = () => {
           </div>
 
           <div className="flex bg-[#a3cfab] flex-col py-4">
-            {/* Second row of marks (1–4) */}
             <div className="flex flex-row pl-3 font-bold w-min">
               {varMarks.map((mark) => (
                 <div
@@ -89,7 +80,7 @@ const OfficialAnswer = () => {
                   className={`relative px-5 py-1 border border-black cursor-pointer ${mark.style}`}
                 >
                   {mark.value}
-                  {/* Conditionally render the triangle if this mark is selected */}
+
                   {selectedVarMark === mark.value && (
                     <div className="absolute bottom-0 w-0 h-0 transform -translate-x-1/2 translate-y-full border-t-[13px] border-b-0 border-l-[13px] border-r-[13px] border-transparent left-1/2 border-t-black" />
                   )}
@@ -119,7 +110,7 @@ tösisema kontakti puudumine."
           />
         </div>
 
-        <div className="mb-8">
+        <div>
           <button
             type="button"
             className="inline-flex pl-4 gap-2 items-center font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 p-1.5 focus:outline-none focus:ring-blue-300 me-2"

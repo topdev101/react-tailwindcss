@@ -213,3 +213,57 @@ export const incidentData = [
     bgColor: "bg-[#a3cfab]",
   },
 ];
+
+export const officialData = [
+  {
+    num: 1,
+    title: "Alev Ain",
+    comment: "",
+    hasEye: false,
+    isSelected: false,
+  },
+  {
+    num: 3,
+    title: "Kaasik Hannes",
+    comment:
+      "Samasel viisil olukorda minek on vastase suhtes hoolimatu. Teisest kollasest kaardist paästab tösisema kontakti puudumine.",
+    hasEye: false,
+    isSelected: false,
+  },
+  {
+    num: 2,
+    title: "Öismaa Kaupo",
+    comment: "",
+    hasEye: true,
+    isSelected: false,
+  },
+  {
+    num: 1,
+    title: "Maalinn Rasmus",
+    comment: "",
+    hasEye: false,
+    isSelected: true,
+  },
+  {
+    num: 1,
+    title: "Lukk Kristjan",
+    comment: "",
+    hasEye: false,
+    isSelected: true,
+  },
+  {
+    num: 2,
+    title: "Mikson Maikel",
+    comment: "tulemust ei paista- muidu act by itself igati hoiatusväärne",
+    hasEye: false,
+    isSelected: true,
+  },
+  {
+    num: 3,
+    title: "Jakobson Jagnar",
+    comment:
+      "Selgelt hiljaks jäämine ja kung-fu löök. Önneks läheb see peopessa ja suuremat tagajärge pole.",
+    hasEye: false,
+    isSelected: true,
+  },
+];

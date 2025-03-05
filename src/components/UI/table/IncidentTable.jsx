@@ -5,7 +5,7 @@ import PlayButton from "../buttons/PlayButton";
 import realMadrid from "../../../assets/images/Real Madrid.png";
 import barcelona from "../../../assets/images/barcelona.png";
 import YellowCard from "../shapes/YellowCard";
-import PlusButton from "../buttons/PlusButton";
+import { PlusCircle } from "../svgs/PlusCircle";
 import TriangleButton from "../buttons/TriangleButton";
 
 const IncidentTable = () => {
@@ -125,7 +125,7 @@ const IncidentTable = () => {
                 <td className="p-1 font-bold text-center">{data.hk}</td>
                 <td className="p-1 font-bold text-center">{data.ko}</td>
                 <td className="p-1 font-bold text-center">
-                  <PlusButton />
+                  <PlusCircle />
                 </td>
               </tr>
             ))}
