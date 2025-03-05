@@ -1,6 +1,6 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
-import PlusButton from "./Button/PlusButton";
+import PlusButton from "./buttons/PlusButton";
 
 const MarkTable = () => {
   const markData = [

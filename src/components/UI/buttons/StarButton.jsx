@@ -4,7 +4,7 @@ const StarButton = () => {
   return (
     <div className="flex gap-2">
       <div className="p-1.5">
-        <div class="flex items-center justify-center w-6 h-6 rounded-full bg-[#1c7c08] text-gray-200 font-bold">
+        <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[#1c7c08] text-gray-200 font-bold">
           i
         </div>
       </div>

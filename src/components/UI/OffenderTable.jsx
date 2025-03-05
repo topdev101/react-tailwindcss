@@ -59,8 +59,8 @@ const OffenderTable = () => {
         <div className="flex">
           <div className="w-full">
             <div className="flex">
-              <div class="flex items-center justify-center w-1/12 h-[228px] border border-black bg-[#70ad46]">
-                <span class="-rotate-90 text-[20px] font-bold text-black whitespace-nowrap">
+              <div className="flex items-center justify-center w-1/12 h-[228px] border border-black bg-[#70ad46]">
+                <span className="-rotate-90 text-[20px] font-bold text-black whitespace-nowrap">
                   Main criteria
                 </span>
               </div>
@@ -69,8 +69,8 @@ const OffenderTable = () => {
               </div>
             </div>
             <div className="flex">
-              <div class="flex items-center justify-center w-1/12 h-[190px] border border-black bg-[#a9cf8b]">
-                <span class="-rotate-90 text-[20px] text-black whitespace-nowrap font-bold">
+              <div className="flex items-center justify-center w-1/12 h-[190px] border border-black bg-[#a9cf8b]">
+                <span className="-rotate-90 text-[20px] text-black whitespace-nowrap font-bold">
                   Offender
                 </span>
               </div>
@@ -79,8 +79,8 @@ const OffenderTable = () => {
               </div>
             </div>
             <div className="flex">
-              <div class="flex items-center justify-center w-1/12 h-[152px] border border-black bg-[#c6dfb6]">
-                <span class="-rotate-90 text-[20px] text-black whitespace-nowrap font-bold">
+              <div className="flex items-center justify-center w-1/12 h-[152px] border border-black bg-[#c6dfb6]">
+                <span className="-rotate-90 text-[20px] text-black whitespace-nowrap font-bold">
                   Opponent
                 </span>
               </div>
