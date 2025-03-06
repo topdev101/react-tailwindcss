@@ -1,5 +1,12 @@
-import barcelona from "../assets/images/barcelona.png";
+import firstImage from "../assets/images/screens/screen1.png";
+import secondImage from "../assets/images/screens/screen2.png";
+import thirdImage from "../assets/images/screens/screen3.png";
+import fourthImage from "../assets/images/screens/screen4.png";
+import fifthImage from "../assets/images/screens/screen5.png";
+import sixthImage from "../assets/images/screens/screen6.png";
+import seventhImage from "../assets/images/screens/screen7.png";
 import realMadrid from "../assets/images/Real Madrid.png";
+
 export const markData = [
   {
     name: "Alvarez Denis",
@@ -377,5 +384,73 @@ export const refereeData = [
     aa: "4",
     hk: "4",
     ko: "4",
+  },
+];
+
+export const pagiNationData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+export const screenData = [
+  {
+    screenUrl: firstImage,
+    date: "06.10.24",
+    teamAvatarUrl: realMadrid,
+    teamName: "Kuressaare",
+    member: "Volossatov",
+    hasComment: false,
+    num: "4",
+  },
+  {
+    screenUrl: secondImage,
+    date: "21.09.24",
+    teamAvatarUrl: realMadrid,
+    teamName: "Tammeka",
+    num: "4",
+    hasComment: true,
+    member: "Epton",
+  },
+  {
+    screenUrl: thirdImage,
+    date: "15.09.24",
+    teamAvatarUrl: realMadrid,
+    teamName: "Kalju",
+    num: "4",
+    hasComment: false,
+    member: "Patrikejevs",
+  },
+  {
+    screenUrl: fourthImage,
+    date: "13.09.24",
+    teamAvatarUrl: realMadrid,
+    teamName: "Tammeka",
+    num: "4",
+    hasComment: true,
+    member: "Pedmanson",
+  },
+  {
+    screenUrl: fifthImage,
+    date: "01.09.24",
+    teamAvatarUrl: realMadrid,
+    teamName: "Paide",
+    num: "4",
+    hasComment: true,
+    member: "Ceesay",
+  },
+  {
+    screenUrl: sixthImage,
+    date: "02.08.24",
+    teamAvatarUrl: realMadrid,
+    teamName: "Vaprus",
+    num: "4",
+    hasComment: false,
+    member: "Kask",
+  },
+  {
+    screenUrl: seventhImage,
+    date: "27.07.24",
+    teamAvatarUrl: realMadrid,
+    teamName: "Tammeka",
+    num: "4",
+    hasComment: false,
+    member: "Epton",
   },
 ];

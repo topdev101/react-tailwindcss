@@ -4,6 +4,7 @@ import OfficialAnswer from "../components/UI/OfficialAnswer";
 import OfficialTable from "../components/UI/table/OfficialTable";
 import LearningPointTable from "../components/UI/table/LearningPointTable";
 import RefereeTable from "../components/UI/table/RefereeTable";
+import IncidentScreen from "../components/UI/IncidentScreen";
 
 const FirstTaskContainer = () => {
   return (
@@ -18,6 +19,9 @@ const FirstTaskContainer = () => {
         <div className="w-full lg:w-1/2">
           <OfficialTable />
         </div>
+      </div>
+      <div>
+        <IncidentScreen />
       </div>
       <div>
         <LearningPointTable />
