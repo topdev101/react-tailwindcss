@@ -5,7 +5,6 @@ import realMadrid from "../../../assets/images/Real Madrid.png";
 import barcelona from "../../../assets/images/barcelona.png";
 import YellowCard from "../shapes/YellowCard";
 import { PlusCircle } from "../svgs/PlusCircle";
-import { Play } from "../svgs/Play";
 import { PlayCircle } from "../svgs/PlayCircle";
 import { Whistle } from "../svgs/Whistle";
 import { Flag } from "../svgs/Flag";
@@ -17,7 +16,7 @@ const LearningPointTable = () => {
   return (
     <div>
       <div className="overflow-x-auto bg-green-100">
-        <table className="min-w-full border-collapse bg-[#30633a]">
+        <table className="min-w-full bg-white border-collapse">
           <thead>
             <tr>
               <th
@@ -37,12 +36,12 @@ const LearningPointTable = () => {
                 )}
                 key={index}
               >
-                <td className="p-1 pt-2 pl-3 font-bold text-center bg-white">
+                <td className="p-1 pt-2 pl-3 font-bold w-[50px] text-center bg-white">
                   <div className="border border-black bg-[#b0bf95] w-[50px] h-[30px] flex items-center justify-center">
                     {data.minute}
                   </div>
                 </td>
-                <td className="p-1 text-center bg-white">
+                <td className="p-1 text-center bg-white w-[90px]">
                   <div className="flex items-center justify-center">
                     {data.time}
                   </div>
@@ -54,12 +53,12 @@ const LearningPointTable = () => {
                     )}
                   </div>
                 </td>
-                <td className="p-1 bg-white">
+                <td className="w-1/4 p-1 bg-white">
                   <b>{data.tSubtopic[0]}</b>
                   <br />
                   <span className="text-sm">{data.tSubtopic[1]}</span>
                 </td>
-                <td className="p-1 bg-white">
+                <td className="w-1/3 p-1 bg-white">
                   <div>
                     <div>
                       <b>{data.Offender[0]}</b>
@@ -124,20 +123,20 @@ const LearningPointTable = () => {
                 </td>
                 <td className="p-1 text-center bg-white">-</td>
                 <td className="flex flex-col bg-white items-center justify-center h-[70px] gap-2 font-bold text-center">
-                  <div className="bg-white border flex items-center justify-center border-black w-[45px] h-7">
+                  <div className="bg-white border flex items-center justify-center border-black w-[45px] h-8">
                     {data.communityMark[0]}
                   </div>
                 </td>
-                <td className="p-1 font-bold text-center bg-white">
+                <td className="p-3 font-bold text-center bg-white">
                   {data.aa}
                 </td>
-                <td className="p-1 font-bold text-center bg-white">
+                <td className="p-3 font-bold text-center bg-white ">
                   {data.hk}
                 </td>
-                <td className="p-1 font-bold text-center bg-white">
+                <td className="pr-2 font-bold text-center bg-white">
                   {data.ko}
                 </td>
-                <td className="p-1 font-bold text-center bg-white">
+                <td className="p-2 font-bold w-[40px] text-center bg-white ">
                   <PlusCircle />
                 </td>
               </tr>

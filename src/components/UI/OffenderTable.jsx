@@ -6,7 +6,7 @@ import YellowCard from "./shapes/YellowCard";
 
 const OffenderTable = () => {
   return (
-    <div className="bg-green-100">
+    <div className="pb-12 bg-green-100">
       <div className="overflow-x-auto">
         <table className="w-full bg-white min-w-fa-pull-left">
           <thead className="text-white bg-green-800 opacity-90">
@@ -43,7 +43,9 @@ const OffenderTable = () => {
         <div className="flex">
           <div className="w-7/12 text-white bg-[#316538] border-gray-700">
             <div className="flex gap-2">
-              <div className="pl-1 font-bold text-white">-</div>
+              <div className="w-[40px] flex justify-center items-center text-white">
+                <div className="h-[3px] w-[20px] bg-white"></div>
+              </div>
               <div className="text-2xl font-bold text-[19px]">
                 Considerations
               </div>

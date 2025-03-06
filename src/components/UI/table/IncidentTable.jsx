@@ -20,7 +20,7 @@ const IncidentTable = () => {
               <th className="p-2 text-left w-[50px]">Time</th>
               <th className="p-2 text-left">Topic Subtopic</th>
               <th className="p-2 text-left">Offender</th>
-              <th className="p-2">Decision by Referee</th>
+              <th className="p-2 w-[100px]">Decision by Referee</th>
               <th className="p-2">Official Mark</th>
               <th className="p-2">My Mark</th>
               <th className="p-2">Community Mark</th>
@@ -52,14 +52,14 @@ const IncidentTable = () => {
                   <div
                     className={twMerge(
                       data.minute
-                        ? "border border-black bg-[#b0bf95] w-[50px] h-[30px] flex items-center justify-center"
+                        ? "border font-bold border-black bg-[#b0bf95] w-[50px] h-[30px] flex items-center justify-center"
                         : ""
                     )}
                   >
                     {data.minute}
                   </div>
                 </td>
-                <td className="p-1 text-center">
+                <td className="p-1 text-center w-[50px]">
                   <div className="flex items-center justify-center">
                     {data.time}
                   </div>
@@ -71,12 +71,12 @@ const IncidentTable = () => {
                     )}
                   </div>
                 </td>
-                <td className="p-1 ">
+                <td className="w-1/4 p-1">
                   <b>{data.tSubtopic[0]}</b>
                   <br />
                   <span className="text-sm">{data.tSubtopic[1]}</span>
                 </td>
-                <td className="p-1">
+                <td className="w-1/3 p-1">
                   <div>
                     <div>
                       <b>{data.Offender[0]}</b>
@@ -101,7 +101,7 @@ const IncidentTable = () => {
                     {data.DBR === "warning" ? <YellowCard /> : <Play />}
                   </div>
                 </td>
-                <td className="p-1 text-center">
+                <td className="flex items-center justify-center p-1 text-center">
                   <div
                     className={twMerge(
                       "relative border border-black w-[55px] h-10 flex items-center justify-center",
@@ -122,7 +122,7 @@ const IncidentTable = () => {
                     )}
                   </div>
                 </td>
-                <td className="p-1 text-center">---</td>
+                <td className="p-1 text-center">-</td>
                 <td className="flex flex-col items-center justify-center h-[70px] gap-2 font-bold text-center">
                   <div className="bg-white border flex items-center justify-center border-black w-[45px] h-7">
                     {data.communityMark[0]}
@@ -135,10 +135,12 @@ const IncidentTable = () => {
                     ""
                   )}
                 </td>
-                <td className="p-1 font-bold text-center">{data.aa}</td>
+                <td className="justify-end p-1 font-bold text-center">
+                  {data.aa}
+                </td>
                 <td className="p-1 font-bold text-center">{data.hk}</td>
                 <td className="p-1 font-bold text-center">{data.ko}</td>
-                <td className="p-1 font-bold text-center">
+                <td className="p-1 font-bold text-center ">
                   <PlusCircle />
                 </td>
               </tr>

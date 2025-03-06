@@ -1,6 +1,10 @@
 import React from "react";
 import { markData } from "../../utils/Constant";
 import VideosCard from "./shapes/VideosCard";
+import { Eye } from "./svgs/Eye";
+import { Whistle } from "./svgs/Whistle";
+import { twMerge } from "tailwind-merge";
+import { RightArrow } from "./svgs/RightArrow";
 
 const MyMark = () => {
   return (
@@ -40,7 +44,7 @@ const MyMark = () => {
           </tbody>
         </table>
       </div>
-      <div className="p-5 pb-12 mb-4 ml-4 mr-4 bg-green-100 lg:mr-0">
+      <div className="p-5 pb-[103px] ml-4 mr-4 font-bold bg-green-100 lg:mr-0">
         <div className="mb-2 font-bold text-green-800">My mark:</div>
         <div className="flex flex-row bg-gradient-to-r from-white to-[yellow] w-min">
           <div className="px-5 border border-black">1</div>
@@ -54,51 +58,26 @@ const MyMark = () => {
           <input className="w-12 border border-black rounded-md" />
         </div>
         <div className="px-2 my-4">
-          <textarea className="w-full h-20 resize-none" placeholder="Comment" />
+          <textarea
+            className="w-full h-20 p-1 resize-none"
+            placeholder="Comment"
+          />
         </div>
         <div className="mb-8">
           <button
             type="button"
-            className="text-white bg-green-900 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2"
+            className="text-white gap-2 bg-green-900 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2"
           >
             Save
-            <svg
-              className="w-3 h-5 ml-2"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 10"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 5h12m0 0L9 1m4 4L9 9"
-              />
-            </svg>
+            <RightArrow />
             <span className="sr-only">Icon description</span>
           </button>
           <button
             type="button"
-            className="text-white  hover:bg-green-800 bg-green-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 dark:hover:bg-green-800"
+            className="text-white gap-2 hover:bg-green-800 bg-green-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 dark:hover:bg-green-800"
           >
             Save and next
-            <svg
-              className="w-3 h-5 ml-2"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 10"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 5h12m0 0L9 1m4 4L9 9"
-              />
-            </svg>
+            <RightArrow />
             <span className="sr-only">Icon description</span>
           </button>
         </div>
@@ -111,52 +90,20 @@ const MyMark = () => {
               }`}
             >
               <div className="flex flex-row items-center mt-2">
-                <div className="bg-[yellow] w-9 text-center border border-black px-2 mr-3">
+                <div
+                  className={twMerge(
+                    "w-9 text-center border border-black px-2 mr-3",
+                    data.mark === 2
+                      ? "bg-gradient-to-r from-[#ddded9] to-[#d3d02f]"
+                      : "bg-[yellow] "
+                  )}
+                >
                   {data.mark}
                 </div>
                 {data.name}
               </div>
-              {data.hasEye && (
-                <svg
-                  className="w-6 h-6 text-green-800"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 4.5v-2m0 16v-2"
-                  />
-                </svg>
-              )}
-              {data.isSelected && (
-                <svg
-                  className="w-6 h-6 text-green-800"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              )}
+              {data.hasEye && <Eye />}
+              {data.isSelected && <Whistle color={"#c7ccca"} />}
             </div>
           ))}
         </div>

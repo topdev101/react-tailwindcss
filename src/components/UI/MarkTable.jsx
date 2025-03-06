@@ -1,28 +1,12 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
 import { PlusCircle } from "./svgs/PlusCircle";
+import { markTableData } from "../../utils/Constant";
 
 const MarkTable = () => {
-  const markData = [
-    [-1, 1.7, 2, 2, 0, 2],
-    [2, 1.0, -1, -1, -1, -1],
-    [2, 1.7, 2, 2, 2, 0],
-    [0, 0.7, -1, -1, -1, -1],
-    [1, 1.7, 0, 1, 2, 2],
-    [2, 1.7, 2, 2, 0, 2],
-    [-1, 1.0, 0, 2, -1, -1],
-    [-1, 0.7, -1, -1, -1, -1],
-    [2, 1.7, 2, 0, 0, 2],
-    [2, 1.7, -1, -1, -1, -1],
-    [-1, 1.0, -1, -1, -1, -1],
-    [-1, 1.7, -1, -1, -1, -1],
-    [1, 1.7, -1, -1, -1, -1],
-    [-1, 1.7, 0, 1, 2, 2],
-    [2, 0.7, -1, -1, -1, -1],
-  ];
   return (
     <div>
-      <table className="w-full bg-green-200 min-w-fa-pull-left">
+      <table className="w-full bg-green-200 min-w-fa-pull-left ">
         <thead className="text-white bg-green-800 opacity-90">
           <tr>
             <th className="text-center w-[100px]">
@@ -73,7 +57,7 @@ const MarkTable = () => {
             </td>
 
             <td className="relative text-center bg-[#c1dfc7]">
-              <div className="w-[5px]">
+              <div className="">
                 <PlusCircle />
               </div>
             </td>
@@ -87,19 +71,19 @@ const MarkTable = () => {
             <th></th>
             <th></th>
           </tr>
-          {markData.map((marks, index) => (
+          {markTableData.map((marks, index) => (
             <tr key={index} className="h-[38px]">
               {marks.map((mark, i) => (
                 <td key={i} className="relative text-center bg-green-100">
                   <div
                     className={twMerge(
                       i === 1 ? "bg-white" : "",
-                      (i === 0 || i === 1) && mark !== -1
+                      (i === 0 || i === 1) && mark !== "-1"
                         ? "absolute transform border border-black -translate-x-1/2 -translate-y-1/2  w-10 h-7 top-1/2 left-1/2"
                         : ""
                     )}
                   >
-                    <b>{mark !== -1 ? mark : ""}</b>
+                    <b>{mark !== "-1" ? mark : ""}</b>
                   </div>
                 </td>
               ))}

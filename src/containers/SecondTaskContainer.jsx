@@ -14,7 +14,7 @@ const SecondTaskContainer = () => {
           <OffenderTable />
         </div>
       </div>
-      <div className="2xl:w-1/3">
+      <div className="bg-green-100 2xl:w-1/3">
         <MarkTable />
       </div>
     </div>

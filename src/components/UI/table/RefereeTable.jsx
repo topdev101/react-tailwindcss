@@ -16,7 +16,7 @@ const RefereeTable = () => {
   return (
     <div>
       <div className="overflow-x-auto bg-green-100">
-        <table className="min-w-full border-collapse bg-[#30633a]">
+        <table className="min-w-full bg-white border-collapse">
           <tbody>
             <tr>
               <td
@@ -34,12 +34,12 @@ const RefereeTable = () => {
                 )}
                 key={index}
               >
-                <td className="p-1 pt-2 pl-3 font-bold text-center bg-white">
+                <td className="p-1 pt-2 pl-3 font-bold text-center bg-white w-[50px]">
                   <div className="border border-black bg-[#b0bf95] w-[50px] h-[30px] flex items-center justify-center">
                     {data.minute}
                   </div>
                 </td>
-                <td className="p-1 text-center bg-white">
+                <td className="p-1 text-center bg-white w-[90px]">
                   <div className="flex items-center justify-center">
                     {data.time}
                   </div>
@@ -51,12 +51,12 @@ const RefereeTable = () => {
                     )}
                   </div>
                 </td>
-                <td className="p-1 bg-white">
+                <td className="w-1/4 p-1 bg-white">
                   <b>{data.tSubtopic[0]}</b>
                   <br />
                   <span className="text-sm">{data.tSubtopic[1]}</span>
                 </td>
-                <td className="p-1 bg-white">
+                <td className="w-1/3 p-1 bg-white">
                   <div>
                     <div>
                       <b>{data.Offender[0]}</b>
@@ -82,7 +82,7 @@ const RefereeTable = () => {
                   </div>
                 </td>
 
-                <td className="p-1 text-center bg-white">
+                <td className="p-1 mx-5 text-center bg-white lg:mx-2">
                   <div className="flex items-center justify-center">
                     {data.DBR === "whistle" ? (
                       <Whistle color={"#000000"} />
@@ -101,7 +101,7 @@ const RefereeTable = () => {
                     )}
                   </div>
                 </td>
-                <td className="p-1 text-center bg-white">
+                <td className="pl-2 pr-2 text-center bg-white lg:pr-0">
                   <div
                     className={twMerge(
                       "border border-black flex items-center m-auto justify-center",
@@ -115,21 +115,17 @@ const RefereeTable = () => {
                   </div>
                 </td>
                 <td className="p-1 text-center bg-white">-</td>
-                <td className="flex flex-col bg-white items-center justify-center h-[70px] gap-2 font-bold text-center">
-                  <div className="bg-white border flex items-center justify-center border-black w-[45px] h-7">
+                <td className="flex flex-col items-center justify-center lg:pr-0 pr-3 h-[70px] gap-2 font-bold text-center">
+                  <div className="bg-white border flex items-center justify-center border-black w-[45px] h-8">
                     {data.communityMark[0]}
                   </div>
                 </td>
-                <td className="p-1 font-bold text-center bg-white">
+                <td className="justify-end pl-3 pr-2 font-bold text-center">
                   {data.aa}
                 </td>
-                <td className="p-1 font-bold text-center bg-white">
-                  {data.hk}
-                </td>
-                <td className="p-1 font-bold text-center bg-white">
-                  {data.ko}
-                </td>
-                <td className="p-1 font-bold text-center bg-white">
+                <td className="p-3 font-bold text-center">{data.hk}</td>
+                <td className="p-3 font-bold text-center">{data.ko}</td>
+                <td className="p-2 font-bold text-center w-[40px]">
                   <PlusCircle />
                 </td>
               </tr>
