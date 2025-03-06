@@ -33,9 +33,9 @@ const IncidentScreen = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-wrap gap-2 mx-2">
+        <div className="flex flex-wrap gap-3 mx-2">
           {screenData.map((data, index) => (
-            <div key={index} className="flex-1 min-w-[200px]">
+            <div key={index} className="w-[250px] h-[220px]">
               <ImageScreen data={data} />
             </div>
           ))}

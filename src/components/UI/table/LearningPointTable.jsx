@@ -11,6 +11,7 @@ import { Whistle } from "../svgs/Whistle";
 import { Flag } from "../svgs/Flag";
 import { SpeakingHead } from "../svgs/SpeakingHead";
 import { SpeakingBody } from "../svgs/SpeakingBody";
+import { Message } from "../svgs/Message";
 
 const LearningPointTable = () => {
   return (
@@ -104,7 +105,7 @@ const LearningPointTable = () => {
                 <td className="p-1 text-center bg-white">
                   <div
                     className={twMerge(
-                      "border border-black flex items-center m-auto justify-center",
+                      "relative border border-black flex items-center m-auto justify-center",
                       data.officialMark[1],
                       data.officialMark[2] === "big"
                         ? "w-[55px] h-10"
@@ -112,6 +113,13 @@ const LearningPointTable = () => {
                     )}
                   >
                     <b>{data.officialMark[0]}</b>
+                    {data.hasMessage ? (
+                      <div className="absolute top-[-8px] right-[-8px]">
+                        <Message />
+                      </div>
+                    ) : (
+                      ""
+                    )}
                   </div>
                 </td>
                 <td className="p-1 text-center bg-white">-</td>

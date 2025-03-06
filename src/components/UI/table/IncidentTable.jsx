@@ -7,6 +7,7 @@ import YellowCard from "../shapes/YellowCard";
 import { PlusCircle } from "../svgs/PlusCircle";
 import { Play } from "../svgs/Play";
 import { PlayCircle } from "../svgs/PlayCircle";
+import { Message } from "../svgs/Message";
 
 const IncidentTable = () => {
   return (
@@ -103,7 +104,7 @@ const IncidentTable = () => {
                 <td className="p-1 text-center">
                   <div
                     className={twMerge(
-                      "border border-black w-[55px] h-10 flex items-center justify-center",
+                      "relative border border-black w-[55px] h-10 flex items-center justify-center",
                       data.officialMark === 5
                         ? "bg-[#f76006]"
                         : data.officialMark === 4
@@ -112,6 +113,13 @@ const IncidentTable = () => {
                     )}
                   >
                     <b>{data.officialMark}</b>
+                    {data.hasMessage ? (
+                      <div className="absolute top-[-8px] right-[-8px]">
+                        <Message />
+                      </div>
+                    ) : (
+                      ""
+                    )}
                   </div>
                 </td>
                 <td className="p-1 text-center">---</td>
