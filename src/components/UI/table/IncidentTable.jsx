@@ -1,13 +1,12 @@
 import React from "react";
 import { incidentData } from "../../../utils/Constant";
 import { twMerge } from "tailwind-merge";
-import PlayButton from "../buttons/PlayButton";
 import realMadrid from "../../../assets/images/Real Madrid.png";
 import barcelona from "../../../assets/images/barcelona.png";
 import YellowCard from "../shapes/YellowCard";
 import { PlusCircle } from "../svgs/PlusCircle";
-import TriangleButton from "../buttons/TriangleButton";
 import { Play } from "../svgs/Play";
+import { PlayCircle } from "../svgs/PlayCircle";
 
 const IncidentTable = () => {
   return (
@@ -64,7 +63,11 @@ const IncidentTable = () => {
                     {data.time}
                   </div>
                   <div className="flex items-center justify-center pr-1">
-                    {data.time ? <PlayButton bgColor={"bg-[#769c79]"} /> : ""}
+                    {data.time ? (
+                      <PlayCircle bgColor={"#769b79"} triangleColor={"white"} />
+                    ) : (
+                      ""
+                    )}
                   </div>
                 </td>
                 <td className="p-1 ">

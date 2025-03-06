@@ -2,6 +2,8 @@ import React from "react";
 import IncidentTable from "../components/UI/table/IncidentTable";
 import OfficialAnswer from "../components/UI/OfficialAnswer";
 import OfficialTable from "../components/UI/table/OfficialTable";
+import LearningPointTable from "../components/UI/table/LearningPointTable";
+import RefereeTable from "../components/UI/table/RefereeTable";
 
 const FirstTaskContainer = () => {
   return (
@@ -17,7 +19,10 @@ const FirstTaskContainer = () => {
           <OfficialTable />
         </div>
       </div>
-      <div></div>
+      <div>
+        <LearningPointTable />
+        <RefereeTable />
+      </div>
     </div>
   );
 };

@@ -19,10 +19,10 @@ const MyMark = () => {
           </thead>
           <tbody className="h-[70px]">
             <tr>
-              <td className="px-4 bg-green-200">
+              <td className="px-4 bg-[#c1dfc7]">
                 <VideosCard />
               </td>
-              <td className="px-4 bg-green-200">
+              <td className="px-4 bg-[#c1dfc7]">
                 <div></div>
                 <div>
                   0:01
@@ -31,7 +31,7 @@ const MyMark = () => {
                   </div>
                 </div>
               </td>
-              <td className="px-4 bg-green-200">
+              <td className="px-4 bg-[#c1dfc7]">
                 <b>Lack of respect</b>
                 <br />
                 Tripping

@@ -23,7 +23,7 @@ const OffenderTable = () => {
           </thead>
           <tbody className="h-[70px]">
             <tr>
-              <td className="px-4 bg-green-200">
+              <td className="px-4 bg-[#c1dfc7]">
                 <div className="flex gap-2">
                   <div>
                     <img src={realMadrid} className="h-6" alt="real" />
@@ -31,10 +31,10 @@ const OffenderTable = () => {
                   <div>Real Madrid</div>
                 </div>
               </td>
-              <td className="px-4 text-center bg-green-200">
+              <td className="px-4 text-center bg-[#c1dfc7]">
                 <YellowCard />
               </td>
-              <td className="px-4 text-center bg-green-200"></td>
+              <td className="px-4 text-center bg-[#c1dfc7]"></td>
             </tr>
           </tbody>
         </table>

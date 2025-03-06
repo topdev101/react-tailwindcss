@@ -1,9 +1,9 @@
 import React from "react";
-import PlayButton from "../UI/buttons/PlayButton";
 import brc from "../../assets/images/barcelona.png";
 import realMadrid from "../../assets/images/Real Madrid.png";
 import StarButton from "../UI/buttons/StarButton";
 import DownIcon from "../UI/shapes/DownIcon";
+import { PlayCircle } from "../UI/svgs/PlayCircle";
 
 function Header() {
   return (
@@ -20,9 +20,7 @@ function Header() {
           </div>
           <div className="flex items-center text-white">09.02.25</div>
           <div className="flex items-center pr-5">
-            <div className="relative flex items-center justify-center w-6 h-6 rounded-full bg-[#1e7c06]">
-              <div className="absolute top-[3px] left-[9px] w-0 h-0 border-t-[9px] border-t-transparent border-l-[9px] border-l-white border-b-[9px] border-b-transparent"></div>
-            </div>
+            <PlayCircle bgColor={"#1f7904"} triangleColor={"white"} />
           </div>
         </div>
         <div className="flex flex-row items-center space-x-2 text-white">
