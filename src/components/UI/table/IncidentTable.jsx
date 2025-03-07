@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { incidentData } from "../../../utils/Constant";
 import { twMerge } from "tailwind-merge";
 import realMadrid from "../../../assets/images/Real Madrid.png";
@@ -9,13 +9,15 @@ import { Play } from "../svgs/Play";
 import { PlayCircle } from "../svgs/PlayCircle";
 import { Message } from "../svgs/Message";
 import Rate from "../Rate";
+import { MyContext } from "../../../contexts/MyContext";
 
 const IncidentTable = () => {
+  const { selectedFourBar } = useContext(MyContext);
   return (
     <div>
       <div className="overflow-x-auto bg-green-100">
-        <table className="min-w-full border-collapse bg-[#30633a]">
-          <thead className="text-gray-300">
+        <table className="min-w-full border-collapse ">
+          <thead className="text-gray-300 bg-[#30633a]">
             <tr>
               <th className="p-2 text-left w-[80px]">Minute</th>
               <th className="p-2 text-left w-[50px]">Time</th>
@@ -44,7 +46,13 @@ const IncidentTable = () => {
             {incidentData.map((data, index) => (
               <tr
                 className={twMerge(
-                  data.bgColor,
+                  index === 2 || index === 3
+                    ? index === 2 && selectedFourBar === false
+                      ? "bg-[#b4d8bc]"
+                      : index === 3 && selectedFourBar === true
+                      ? "bg-[#a3cfab]"
+                      : ""
+                    : "bg-white",
                   index === 0 ? "border-b border-gray-300" : ""
                 )}
                 key={index}
@@ -129,13 +137,18 @@ const IncidentTable = () => {
                     <div className="bg-white cursor-pointer border flex items-center justify-center border-black w-[45px] h-10">
                       {data.communityMark[0]}
                     </div>
-                    <div className="absolute z-10 hidden p-3 mb-4 text-sm text-gray-900 bg-white border border-[#254432] rounded shadow-lg group-hover:block w-96 left-1/2 transform -translate-x-1/2 bottom-full">
+                    <div className="absolute z-10 hidden px-2 mb-4 text-sm text-gray-900 bg-[#efefed] border border-[#254432] rounded shadow-lg group-hover:block w-[370px] left-1/2 transform -translate-x-1/2 bottom-full">
                       <div className="text-left">Evaluations: 54</div>
                       <div>
                         <div>
                           <Rate />
                         </div>
-                        <div>2 42 9 1</div>
+                        <div className="flex justify-end gap-9">
+                          <div className="pr-1 text-center">2</div>
+                          <div className="text-center">42</div>
+                          <div className="pr-2 text-center">9</div>
+                          <div className="pr-5">1</div>
+                        </div>
                       </div>
                       <div className="font-semibold text-left">
                         10% lowest & highest marks excluded

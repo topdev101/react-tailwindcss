@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { Star } from "./svgs/Star";
 import { RoundLocalHospital } from "./svgs/RoundLocalHospital";
 import { RightArrow } from "./svgs/RightArrow";
+import { twMerge } from "tailwind-merge";
+import { MyContext } from "../../contexts/MyContext";
 
 const OfficialAnswer = () => {
   const [selectedOfficialMark, setSelectedOfficialMark] = useState(4);
+  const { selectedFourBar, setSelectedFourBar } = useContext(MyContext);
 
   const [selectedVarMark, setSelectedVarMark] = useState(3);
+  const [flag, setFlag] = useState(true);
 
   const officialMarks = [
     { value: 0, style: "bg-white" },
@@ -41,37 +45,59 @@ const OfficialAnswer = () => {
           <Star />
           <div>Official Answer:</div>
         </div>
+        <div
+          className={twMerge(
+            "py-2 cursor-pointer",
+            !selectedFourBar ? "bg-[#a3cfab]" : ""
+          )}
+          onClick={() => {
+            if (flag) {
+              setSelectedFourBar(false);
+              setFlag(false);
+            }
+          }}
+        >
+          <div className="flex flex-row pl-3 font-bold bg-gradient-to-r w-min">
+            {officialMarks.map((mark) => (
+              <div
+                key={mark.value}
+                onClick={() => setSelectedOfficialMark(mark.value)}
+                className={`relative px-5 py-1 border border-black cursor-pointer ${mark.style}`}
+              >
+                {mark.value}
 
-        <div className="flex flex-row pl-3 font-bold bg-gradient-to-r w-min">
-          {officialMarks.map((mark) => (
-            <div
-              key={mark.value}
-              onClick={() => setSelectedOfficialMark(mark.value)}
-              className={`relative px-5 py-1 border border-black cursor-pointer ${mark.style}`}
-            >
-              {mark.value}
+                {selectedOfficialMark === mark.value && (
+                  <div className="absolute top-9 w-0 h-0 transform -translate-x-1/2 -translate-y-full border-b-[9px] border-t-0 border-l-[9px] border-r-[9px] border-transparent left-1/2 border-b-black" />
+                )}
+              </div>
+            ))}
+          </div>
 
-              {selectedOfficialMark === mark.value && (
-                <div className="absolute top-9 w-0 h-0 transform -translate-x-1/2 -translate-y-full border-b-[9px] border-t-0 border-l-[9px] border-r-[9px] border-transparent left-1/2 border-b-black" />
-              )}
+          <div className="flex gap-2 p-4">
+            <input type="checkbox" className="w-6 h-6" />
+            <div className="flex items-center justify-center text-center">
+              Mark is based on match context
             </div>
-          ))}
-        </div>
-
-        <div className="flex gap-2 p-4">
-          <input type="checkbox" className="w-6 h-6" />
-          <div className="flex items-center justify-center text-center">
-            Mark is based on match context
+          </div>
+          <div className="flex gap-1 pl-2 mb-2 font-bold">
+            <div className="text-green-800">VAR intervention:</div>
+            <RoundLocalHospital />
           </div>
         </div>
 
         <div>
-          <div className="flex gap-1 mb-2 font-bold">
-            <div className="text-green-800">VAR intervention:</div>
-            <RoundLocalHospital />
-          </div>
-
-          <div className="flex bg-[#a3cfab] flex-col py-4">
+          <div
+            className={twMerge(
+              "flex flex-col py-4 cursor-pointer",
+              selectedFourBar ? "bg-[#a3cfab]" : ""
+            )}
+            onClick={() => {
+              if (!flag) {
+                setSelectedFourBar(true);
+                setFlag(true);
+              }
+            }}
+          >
             <div className="flex flex-row pl-3 font-bold w-min">
               {varMarks.map((mark) => (
                 <div

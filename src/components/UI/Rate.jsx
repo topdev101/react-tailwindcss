@@ -13,7 +13,7 @@ const officialMarks = [
 const Rate = () => {
   return (
     <div>
-      <div className="flex flex-row pl-3 font-bold bg-gradient-to-r w-min">
+      <div className="flex flex-row font-bold bg-gradient-to-r w-min">
         {officialMarks.map((mark) => (
           <div
             key={mark.value}
