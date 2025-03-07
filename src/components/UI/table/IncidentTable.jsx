@@ -8,6 +8,7 @@ import { PlusCircle } from "../svgs/PlusCircle";
 import { Play } from "../svgs/Play";
 import { PlayCircle } from "../svgs/PlayCircle";
 import { Message } from "../svgs/Message";
+import Rate from "../Rate";
 
 const IncidentTable = () => {
   return (
@@ -124,8 +125,23 @@ const IncidentTable = () => {
                 </td>
                 <td className="p-1 text-center">-</td>
                 <td className="flex flex-col items-center justify-center h-[70px] gap-2 font-bold text-center">
-                  <div className="bg-white border flex items-center justify-center border-black w-[45px] h-7">
-                    {data.communityMark[0]}
+                  <div className="relative group">
+                    <div className="bg-white cursor-pointer border flex items-center justify-center border-black w-[45px] h-10">
+                      {data.communityMark[0]}
+                    </div>
+                    <div className="absolute z-10 hidden p-3 mb-4 text-sm text-gray-900 bg-white border border-[#254432] rounded shadow-lg group-hover:block w-96 left-1/2 transform -translate-x-1/2 bottom-full">
+                      <div className="text-left">Evaluations: 54</div>
+                      <div>
+                        <div>
+                          <Rate />
+                        </div>
+                        <div>2 42 9 1</div>
+                      </div>
+                      <div className="font-semibold text-left">
+                        10% lowest & highest marks excluded
+                      </div>
+                      <div className="absolute w-0 h-0 transform -translate-x-1/2 border-t-8 border-l-8 border-r-8 left-1/2 top-full border-t-[#000000] border-l-transparent border-r-transparent"></div>
+                    </div>
                   </div>
                   {data.communityMark[1] ? (
                     <div className="w-[45px] h-5 text-[12px] bg-white font-normal border border-black">
