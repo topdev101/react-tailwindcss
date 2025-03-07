@@ -29,13 +29,7 @@ const LearningPointTable = () => {
           </thead>
           <tbody>
             {learningPointData.map((data, index) => (
-              <tr
-                className={twMerge(
-                  data.bgColor,
-                  index === 0 ? "border-b border-gray-300" : ""
-                )}
-                key={index}
-              >
+              <tr className="border-b border-gray-300" key={index}>
                 <td className="p-1 pt-2 pl-3 font-bold w-[50px] text-center bg-white">
                   <div className="border border-black bg-[#b0bf95] w-[50px] h-[30px] flex items-center justify-center">
                     {data.minute}

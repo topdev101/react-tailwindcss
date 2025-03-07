@@ -44,7 +44,7 @@ const MyMark = () => {
           </tbody>
         </table>
       </div>
-      <div className="p-5 pb-[103px] ml-4 mr-4 font-bold bg-green-100 lg:mr-0">
+      <div className="p-5 pb-[103px] mr-4 font-bold bg-green-100 lg:mr-0">
         <div className="mb-2 font-bold text-green-800">My mark:</div>
         <div className="flex flex-row bg-gradient-to-r from-white to-[yellow] w-min">
           <div className="px-5 border border-black">1</div>

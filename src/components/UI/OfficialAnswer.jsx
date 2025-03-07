@@ -52,7 +52,7 @@ const OfficialAnswer = () => {
               {mark.value}
 
               {selectedOfficialMark === mark.value && (
-                <div className="absolute bottom-0 w-0 h-0 transform -translate-x-1/2 translate-y-full border-t-[13px] border-b-0 border-l-[13px] border-r-[13px] border-transparent left-1/2 border-t-black" />
+                <div className="absolute top-9 w-0 h-0 transform -translate-x-1/2 -translate-y-full border-b-[9px] border-t-0 border-l-[9px] border-r-[9px] border-transparent left-1/2 border-b-black" />
               )}
             </div>
           ))}
@@ -82,7 +82,7 @@ const OfficialAnswer = () => {
                   {mark.value}
 
                   {selectedVarMark === mark.value && (
-                    <div className="absolute bottom-0 w-0 h-0 transform -translate-x-1/2 translate-y-full border-t-[13px] border-b-0 border-l-[13px] border-r-[13px] border-transparent left-1/2 border-t-black" />
+                    <div className="absolute top-9 w-0 h-0 transform -translate-x-1/2 -translate-y-full border-b-[9px] border-t-0 border-l-[9px] border-r-[9px] border-transparent left-1/2 border-b-black" />
                   )}
                 </div>
               ))}

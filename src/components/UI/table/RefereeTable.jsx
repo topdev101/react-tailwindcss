@@ -114,7 +114,7 @@ const RefereeTable = () => {
                     <b>{data.officialMark[0]}</b>
                   </div>
                 </td>
-                <td className="p-1 text-center bg-white">-</td>
+                <td className="p-1 pl-2 pr-0 text-center bg-white">-</td>
                 <td className="flex flex-col items-center justify-center lg:pr-0 pr-3 h-[70px] gap-2 font-bold text-center">
                   <div className="bg-white border flex items-center justify-center border-black w-[45px] h-8">
                     {data.communityMark[0]}

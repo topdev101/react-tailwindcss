@@ -63,13 +63,13 @@ const MarkTable = () => {
             </td>
           </tr>
           <tr className="h-[45px] bg-green-100">
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           {markTableData.map((marks, index) => (
             <tr key={index} className="h-[38px]">
