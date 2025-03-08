@@ -85,7 +85,7 @@ const sortOrderOptions = [
 
 const IncidentScreen = () => {
   const [num1, setNum1] = useState(1);
-  const [showFilter, setShowFilter] = useState(true);
+  const [showFilter, setShowFilter] = useState(false);
 
   return (
     <div className="mx-4 my-2">
@@ -251,7 +251,7 @@ const IncidentScreen = () => {
         </div>
       </div>
 
-      <div className="mt-4 bg-white">
+      <div className="bg-white ">
         <div className="flex gap-1 p-2 font-bold text-white">
           {pagiNationData.map((item, index) => (
             <div
@@ -275,7 +275,7 @@ const IncidentScreen = () => {
         </div>
       </div>
 
-      <div className="mt-4 bg-white">
+      <div className="bg-white ">
         <div className="flex gap-1 p-2 font-bold text-white">
           {pagiNationData.map((item, index) => (
             <div
