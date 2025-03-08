@@ -48,7 +48,7 @@ const OfficialTable = () => {
               {!selectedFourBar ? (
                 <div
                   className={twMerge(
-                    "w-10 px-2 bg-white",
+                    "w-10 px-2 font-normal bg-white",
                     !data.statusSecondNum ? "border border-black" : ""
                   )}
                 >
