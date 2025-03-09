@@ -23,7 +23,7 @@ const LearningPointTable = () => {
                 className="text-left w-[300px] text-white pl-2 py-1 bg-[#5e9156]"
                 colSpan="12"
               >
-                Main incidents
+                Learning points
               </th>
             </tr>
           </thead>

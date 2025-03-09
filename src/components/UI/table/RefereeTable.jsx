@@ -20,7 +20,7 @@ const RefereeTable = () => {
           <tbody>
             <tr>
               <td
-                className="text-left text-white pl-2 py-1 bg-[#5e9156]"
+                className="text-left font-bold text-white pl-2 py-1 bg-[#5e9156]"
                 colSpan="12"
               >
                 For referee / Statistics
@@ -52,7 +52,7 @@ const RefereeTable = () => {
                   </div>
                 </td>
                 <td className="w-1/4 p-1 bg-white">
-                  <b>{data.tSubtopic[0]}</b>
+                  <b>{data.tSubtopic[0]}</b>0000000
                   <br />
                   <span className="text-sm">{data.tSubtopic[1]}</span>
                 </td>
@@ -114,7 +114,9 @@ const RefereeTable = () => {
                     <b>{data.officialMark[0]}</b>
                   </div>
                 </td>
-                <td className="p-1 pl-2 pr-0 text-center bg-white">-</td>
+                <td className="pr-1 text-center bg-white p1-2 lg:p-1 lg:pr-0">
+                  -
+                </td>
                 <td className="flex flex-col items-center justify-center lg:pr-0 pr-3 h-[70px] gap-2 font-bold text-center">
                   <div className="bg-white border flex items-center justify-center border-black w-[45px] h-8">
                     {data.communityMark[0]}
